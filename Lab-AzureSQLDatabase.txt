@@ -1,0 +1,39 @@
+LAB 1 – Azure SQL Database
+
+Exercise 1
+Creating SQL Database
+
+1 - Click Create a resource in the upper left-hand corner of the Azure portal;
+2 - In the search box type SQL Database and select the result;
+3 – Click Create;
+4 – In the Create SQL Database panel, fill in the following fields:
+Subscription: leave Default
+Resource Group: Click Create New -> insert azeqixrg in Name field and click OK;
+Database Name: Enter a Database Name (ex. sqldb01);
+Server: Click em Create New. In the left blade, insert a unique name in field Server Name. In Server Admin login insert the name for admin of instance. Insert password and location and click Select;
+Compute + Storage: Clique Configure Database. In the new blade, select Basic and leave default options and click Apply.
+5 – Leave other options in default values and click Next: Additional Settings;
+6 – In Collation field, leave default value and click Review + create;
+7 – Click Create.
+
+Exercise 2
+Accessing the Azure SQL Database
+
+1 – In left pane, click Resource Group;
+2 – Click on Resource group created in exercise 1 -> step 4;
+3 – Click on SQL Database recently created;
+4 – In Overview, click Query Editor (preview); 
+5 – Insert the password created in Exercise 1 -> step 4 and click OK;
+6 – In query editor, run the following command:
+CREATE TABLE Customer (
+Cod_id int IDENTITY(1,1),
+First_Name varchar (30) NOT NULL,
+Last_Name varchar (30) NULL,
+Address varchar (100) NULL
+)
+GO
+7 – Click RUN;
+8 – Click on New Query and run the following command:
+SELECT * FROM Customer
+GO
+9 – click RUN and in the bottom panel click Results.
