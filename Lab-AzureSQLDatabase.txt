@@ -25,15 +25,24 @@ Accessing the Azure SQL Database
 4 – In Overview, click Query Editor (preview); 
 5 – Insert the password created in Exercise 1 -> step 4 and click OK;
 6 – In query editor, run the following command:
+
 CREATE TABLE Customer (
 Cod_id int IDENTITY(1,1),
 First_Name varchar (30) NOT NULL,
 Last_Name varchar (30) NULL,
-Address varchar (100) NULL
+[Address] varchar (100) NULL
 )
 GO
+
 7 – Click RUN;
 8 – Click on New Query and run the following command:
+
+INSERT INTO Customer (First_Name, Last_Name, [Address]) VALUES ('John', 'Marshall', 'Avenue Park, 65')
+GO
+
+9 - Click on New Query and run the following command:
+
 SELECT * FROM Customer
 GO
-9 – click RUN and in the bottom panel click Results.
+
+10 – Click RUN and in the bottom panel and click Results.
