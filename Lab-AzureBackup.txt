@@ -1,0 +1,62 @@
+LAB Azure Backup
+
+Exercise 1
+Creating Backup and Site Recovery
+
+1 - Click Create a resource in the upper left-hand corner of the Azure portal;
+2 - In the search box type Backup and select Backup and Site Recovery (OMS);
+3 – Click Create;
+4 – In the Recovery Services Vault panel, fill in the following fields:
+Name: Enter a vault name;
+Subscription: Leave default;
+Resource Group: Create new Resource group;
+Location: Select Brazil South
+5 - Click Create.
+
+Exercise 2
+Protecting Data with Azure Backup
+
+1 – In left pane, click Resource Group;
+2 – Click on Resource group created in exercise 1 -> step 4;
+3 - In Overview, click +Backup on central panel;
+4 - In Backup Goal, in filed Where is your workload running, select On-Premises;
+5 - In What do you want to backup, select Files and Folders;
+6 - Click Prepare Infrastructure;
+7 - In Prepare Infrastructure blade, click Download Agent for Windows Server or Windows Client;
+8 - In Download vault credentials, select Already downloaded or using... and click Download;
+9 - Execute agent downloaded in step 7;
+10 - In Installation Configuiration, leave options default and click Next;
+11 - In Proxy configuration, click Next;
+12 - In Microsoft Update, select I don't using Microsoft Update and click Next;
+13 - If necessary software is available, click Install and wait;
+14 - Click Proceed with registration;
+15 - In Vault Identification, click in Search and select the credential downloaded in step 8. Click Next;
+16 - Create a passphrase to encrypt backups and click Conclude;
+17 - Click Close.
+
+Exercise 3
+Run a Backup
+
+1 - On Microsoft Azure Backup Agent, Click in Schedule Backup on Action menu;
+2 - In Introduction, click Next;
+3 - In Select Itens to Backup, click Add itens button and select 2 folders and click Ok;
+4 - Click Next;
+5 - In Specify backup schedule, leave default and click Next;
+6 - In Policy Retention, note the retention policie options and click Next;
+7 - Leave Backup Type option default and click Next;
+8 - Click Conclude and Close;
+9 - In Micrsoft Azure Backup right panel, click Back Up Now;
+10 - Click Back Up and wait;
+11 - Back to Azure Portal, and Overview click Backup Items;
+12 - CLick on Azure Backup Agent;
+13 - Backup Item filed, click in C:\;
+14 - on the screen that appears, the hostname of the machine where the backup agent was installed is listed.
+
+
+
+
+
+
+
+
+
