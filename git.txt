@@ -2,3 +2,5 @@
 # Arquivo de teste para aprendizado do Git.
 
 # Essa linha foi adicionada após o arquivo ter sido comitado
+
+# Nova linha para ver o diff do arquivo.
