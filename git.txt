@@ -1,0 +1,2 @@
+#Git
+# Arquivo de teste para aprendizado do Git.
