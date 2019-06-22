@@ -1,2 +1,4 @@
 #Git
 # Arquivo de teste para aprendizado do Git.
+
+# Essa linha foi adicionada após o arquivo ter sido comitado
