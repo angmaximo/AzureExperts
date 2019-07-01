@@ -23,7 +23,6 @@ Deploy a Cosmos DB Instance
 12.2 - In the Container id field, enter the value MemberCollection;
 12.3 - In the Partition Key field, enter the value /lastName;
 12.4 - In the Throughput field, enter the value 400.
-
 13 - Click Ok button.
 14 - Wait for the creation of the new database and container to finish before moving on with this lab;
 15 - On the left side of the Azure Cosmos DB blade, locate the Settings section and click the Keys link;
@@ -89,8 +88,50 @@ WHERE
     coll.age > 20
 19 - Click the Execute Query button at the top of the query editor.
 
+Exercise 3
+Deploy Application using Cosmos DB
 
+1 - On the left side of the portal, click the Create a resource link;
+2 - At the top of the New blade, locate the Search the Marketplace field;
+3 - Enter the text Template Deployment into the search field and press Enter;
+4 - In the result blade, click on  Template deployment (deploy using custom) and next click Create;
+5 - In the Custom Deployment blade, click Build your own template in the editor;
+6 - please download the api.json file through the url http://shorturl.at/csxM4 (you need to connect to the corporate account to access the file);
+7 - On the screen, click Download;
+8 - In the Edit template blade, click the Load file link;
+9 - In the Open file dialog that appears, navigate to the folder where the api.json file has been downloaded in step 6 and 7;
+10 - Select the api.json file;
+11 - Back in the Edit template blade, click the Save button to persist the template;
+12 - Back in the Custom deployment blade, perform the following actions:
+12.1 - Leave the Subscription field set to its default value;
+12.2 - In the Resource group section, select the same resource group where cosmos DB was raised;
+12.3 - In the Terms and Conditions section, select the I agree to the terms and conditions stated above checkbox;
+12.4 - Click the Purchase button.
 
+Exercise 4
+Validate API app
 
-
+1 - On the left side of the portal, click the Resource groups link;
+2 - In the Resource groups blade, locate and select the Resource Group created and click on it;
+3 - In the resource group blade, select the Api App you most recently created;
+4 - In the Api App blade, locate the Settings section and click Configuration link;
+5 - In the Application Settings pane, scroll down and locate the App Settings section. Perform the following actions:
+5.1 - Update the value of the CosmosDB:AuthorizationKey setting to the value of the Primary Key field from the Cosmos DB instance you created earlier in this lab
+(Exercise 1, step 16);
+5.2 - Update the value of the CosmosDB:EndpointUrl setting to the value of the Uri field from the Cosmos DB instance you created earlier in this lab
+(Exercise 1, step 16);
+5.3 - Click the Save button at the top of the pane.
+6 - In the left-side of the Api App blade, locate and click the Overview link;
+7 - Click the Restart button at the top of the blade. Wait a couple of minutes for the Web App instance to restart;
+8 - After restart, in the Overview pane click on URL (the application will open in another browser tab);
+9 - In the Swagger UI homepage, click the link to expand the section for the /Get /Documents call using the GET HTTP Verb;
+10 - Locate the Response Messages section. Click the Try it out! button;
+11 - Observe the results of the request;
+12 - Back in the Swagger UI homepage, click the link to expand the section for the /Populate call using the POST HTTP Verb.
+13 - Locate the Parameters section. In the Value field for the options parameter, paste in the following JSON content:
+{
+    "quantity": 50
+}
+14 - Locate the Response Messages section. Click the Try it out! button;
+15 - Observe the results of the request.
 
