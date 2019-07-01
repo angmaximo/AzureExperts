@@ -1,0 +1,96 @@
+LAB Azure Cosmos DB
+
+Exercise 1
+Deploy a Cosmos DB Instance
+
+1 - On the left side of the portal, click the Create a resource link;
+2 - At the top of the New blade, locate the Search the Marketplace field;
+3 - Enter the text Cosmos into the search field and select Azure Cosmos DB. Next, click Create;
+4 - In the Create Azure Cosmos DB Account blade, perform the following actions:
+4.1 - Resource Group: Create new Resource group;
+4.2 - Account Name: enter a globally unique value;
+4.3 - API: select the Core (SQL) option;
+4.4 - Location Field: select the East US location.
+5 - Click on Next: Network button;
+6 - In Virtual Network field, select None. Click Review + create button;
+7 - Click Create button.
+8 - Wait for the creation task to complete before moving on with this lab.
+9 - In the Resource groups blade, locate and select the Resource Group created;
+10 - In the resource group blade, select the Azure Cosmos DB account you recently created;
+11 - At the top of the Azure Cosmos DB blade, click the Add Container button;
+12 - In the Add Container popup, perform the following actions:
+12.1 - In the Database id field, enter the value FinancialClubDatabase;
+12.2 - In the Container id field, enter the value MemberCollection;
+12.3 - In the Partition Key field, enter the value /lastName;
+12.4 - In the Throughput field, enter the value 400.
+
+13 - Click Ok button.
+14 - Wait for the creation of the new database and container to finish before moving on with this lab;
+15 - On the left side of the Azure Cosmos DB blade, locate the Settings section and click the Keys link;
+16 - In the Keys pane, record the values in the URI and Primary Key fields. You will use these values later in this lab.
+
+Exercise 2
+Create and Query Documents in Cosmos DB
+
+1 - On the left side of the Azure Cosmos DB blade, locate and click the Data Explorer link;
+2 - In the Data Explorer pane, locate the Container section and expand the FinancialClubDatabase node;
+3 - Still within the Container section, select the MemberCollection node located underneath the FinancialClubDatabase node;
+4 - Click the New SQL Query button at the top of the Data Explorer pane;
+5 - In the new Query tab that opened, locate the query editor. Replace the existing query with the following query:
+SELECT 
+    *
+FROM
+    coll
+6 - Click the Execute Query button at the top of the query editor;
+7 - Still within the Container section, select the Items node located underneath the MemberCollection node;
+8 - In the Items tab that opened, click the New Item button at the top of the tab;
+9 - In the Items tab, locate the document editor. Replace the existing item with the following item:
+{
+    "firstName": "Pennington",
+    "lastName": "Oneal",
+    "age": 26,
+    "salary": 90000.00,
+    "company": "Veraq",
+    "isVested": false
+}
+10 - Click the Save button at the top of the Items tab;
+11 - Repeat steps 8 and 9. Replace the existing item with the following item:
+{
+    "firstName": "Suzanne",
+    "lastName": "Oneal"
+}
+12 - Click the Save button at the top of the Items tab;
+13 - CLick int the Query 1 tab and execute the following query:
+SELECT 
+    *
+FROM
+    coll
+15 - Click the Execute Query button at the top of the query editor.
+16 - In the query editor, replace the existing query with the following query:
+SELECT 
+    coll.id, 
+    coll.firstName, 
+    coll.lastName,
+    coll.isVested
+FROM 
+    coll
+WHERE
+    IS_DEFINED(coll.isVested)
+17 - Click the Execute Query button at the top of the query editor;
+18 - In the query editor, replace the existing query with the following query:
+SELECT 
+    coll.id, 
+    coll.firstName, 
+    coll.lastName,
+    coll.age
+FROM 
+    coll
+WHERE
+    coll.age > 20
+19 - Click the Execute Query button at the top of the query editor.
+
+
+
+
+
+
