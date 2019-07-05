@@ -96,9 +96,9 @@ Deploy Application using Cosmos DB
 3 - Enter the text Template Deployment into the search field and press Enter;
 4 - In the result blade, click on  Template deployment (deploy using custom) and next click Create;
 5 - In the Custom Deployment blade, click Build your own template in the editor;
-6 - please download the api.json file through the url http://shorturl.at/csxM4 (you need to connect to the corporate account to access the file);
-7 - On the screen, click Download;
-8 - In the Edit template blade, click the Load file link;
+6 - please download the api.json file through the url https://github.com/angmaximo/AzureExperts/blob/master/api.json;
+7 - copy and paste the content displayed on the screen into a text file and save it with the same name (api.json). Check after saving the file if the format of the contents of the file has not changed;
+8 - In the Edit template blade on Azure portal, click the Load file link;
 9 - In the Open file dialog that appears, navigate to the folder where the api.json file has been downloaded in step 6 and 7;
 10 - Select the api.json file;
 11 - Back in the Edit template blade, click the Save button to persist the template;
